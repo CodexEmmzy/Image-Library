@@ -1,0 +1,12 @@
+<!-- favorites.component.html -->
+<div class="favorites">
+    <div *ngIf="favoritePhotos.length === 0">
+      <p>You haven't added any images to your favorites yet.</p>
+    </div>
+    <div *ngFor="let photo of favoritePhotos" class="favorite-photo" 
+         [ngClass]="{ 'selected': photo.id === selectedPhotoId }" 
+         (click)="selectPhoto(photo.id)">
+        <img [src]="photo.url" alt="Favorite Photo {{ photo.id }}">
+    </div>
+    
+  </div>

@@ -1,0 +1,8 @@
+<div class="photo-grid">
+    <div *ngFor="let photo of photos" class="photo">
+      <img [src]="photo.url" alt="Photo">
+      <button (click)="addToFavorites(photo)">Add to Favorites</button>
+    </div>
+</div>
+
+<div *ngIf="loading" class="loading-spinner"></div>
